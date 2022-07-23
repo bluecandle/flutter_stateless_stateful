@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sample_widget/rabbit.dart';
+import 'package:sample_widget/stateful_sample_widget.dart';
 import 'package:sample_widget/stateless_sample_widget.dart';
 
 void main() {
@@ -17,9 +18,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: StatelessSampleWidget(
-          title: '구멍이 없는 박스로 실험.',
-          rabbit: Rabbit(name: '토끼1', state: RabbitState.SLEEP)),
+      // home: StatelessSampleWidget(
+      //     title: '구멍이 없는 박스로 실험.',
+      //     rabbit: Rabbit(name: '토끼1', state: RabbitState.SLEEP)),
+      home: StatefulSampleWidget(
+          title: '구멍이 있는 박스로 실험.',
+          rabbit: Rabbit(name: '토끼2', state: RabbitState.SLEEP)),
     );
   }
 }
